@@ -11,6 +11,8 @@ public class Monedero {
 		 En un monedero se pueden hacer ingresos y gastos. 
 		 También es posible hacer una transferencia entre un monedero y otro. 
 		 Se permite el saldo negativo.*/
+	
+	
 	// Atributos
 		private String id;
 		private double saldo;
@@ -18,6 +20,7 @@ public class Monedero {
 		private double cantidadGastada;
 		private String caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 		private double cantidadTransferida;
+		
 		
 	// Constructor
 		public Monedero( double saldo) {
