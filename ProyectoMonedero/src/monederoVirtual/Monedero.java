@@ -1,6 +1,6 @@
 package monederoVirtual;
 
-// Importamos la libereria SecureRandom que nos permite poder generar un id aleatorio con su metodo random
+// Importamos la libreria SecureRandom que nos permite poder generar un id aleatorio con su metodo random
 import java.security.SecureRandom;
 
 public class Monedero {
