@@ -16,9 +16,8 @@ public class Monedero {
 	// Atributos
 		private String id;
 		private double saldo;
-		private String caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+		private double cantidadTransferida;
 
-		
 		
 	// Constructor
 		public Monedero( double saldo) {
@@ -69,21 +68,31 @@ public class Monedero {
 			}
 			return saldo;
 		}
+		
+		public double realizarTransferencia (double cantidadTransferida, Monedero recibe) {
+			if(cantidadTransferida <= 0.0) {
+				System.out.println("Error. No puedes realizar una tranferencia inferior o igual a 0.0€");
+			}else {
+				System.out.println("Perfecto. Cantidad transferida correctamente");
+				this.saldo = saldo - cantidadTransferida;
+				recibe.ingresar(cantidadTransferida);
+			}
+			return saldo;
+		}
 			
 		
 		public String creacionId() {
-			SecureRandom random = new SecureRandom();
 			StringBuilder idGenerado = new StringBuilder(12);
 			
 			for (int i = 0; i < 12; i++) {
 				
-	            int indice = random.nextInt(caracteres.length());
-	           
-	            idGenerado.append(caracteres.charAt(indice));
+	           Math.random();
 	        }
 
 	        return idGenerado.toString();
 		}
+		
+		
 		
 		
 		
