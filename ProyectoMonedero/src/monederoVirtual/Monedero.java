@@ -27,7 +27,6 @@ public class Monedero {
 		public Monedero() {
 			this.id = creacionId();
 			this.saldo = 0.0;
-
 		}
 		
 		// Getters y Setters
@@ -64,7 +63,10 @@ public class Monedero {
 		}
 	
 		public double gastoDinero (double cantidadGastada) {
-			if(cantidadGastada <= 0.0) {
+			if(saldo <= 0.0) {
+				System.out.println("Error. No dispones de saldo suficiente.");
+			}
+			else if(cantidadGastada <= 0.0) {
 				System.out.println("Error. No has gastado nada este mes\n");
 			}else {
 				System.out.println("Has gastado " + cantidadGastada + " €\n");
@@ -74,7 +76,7 @@ public class Monedero {
 		}
 		
 		public double realizarTransferencia (double cantidadTransferida, Monedero recibe) {
-			if(cantidadTransferida <= 0.0) {
+			if(cantidadTransferida <= 0.0 || saldo <= 0.0) {
 				System.out.println("Error. No puedes realizar una tranferencia inferior o igual a 0.0€\n");
 			}else {
 				System.out.println("Perfecto. Cantidad transferida correctamente\n");

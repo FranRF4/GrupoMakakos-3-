@@ -18,16 +18,16 @@ public class Main {
         
         //Gastos
         System.out.println("\nGastos: ");
-        monederoSinSaldo.gastoDinero(150); 
-        
+        monederoConSaldo.gastoDinero(110.0); 
         mostrarValoresMonedero(monederoConSaldo);
-        mostrarValoresMonedero(monederoSinSaldo);
         
         //Ingresar
         System.out.println("\nCuanto quiere ingresar?");
+        monederoSinSaldo.ingresar(20.0);
+        mostrarValoresMonedero(monederoConSaldo);
         
         //Transferencia
-        monederoConSaldo.realizarTransferencia(200, monederoSinSaldo);
+        monederoConSaldo.realizarTransferencia(60.0, monederoSinSaldo);
         mostrarValoresMonedero(monederoSinSaldo);
         
 	}
