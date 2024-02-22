@@ -27,7 +27,7 @@ public class Main {
         mostrarValoresMonedero(monederoConSaldo);
         
         //Transferencia
-        monederoConSaldo.realizarTransferencia(60.0, monederoSinSaldo);
+        monederoConSaldo.realizarTransferencia(1000.0, monederoSinSaldo);
         mostrarValoresMonedero(monederoSinSaldo);
         
 	}

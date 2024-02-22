@@ -16,7 +16,7 @@ public class Monedero {
 	    // Atributos
 		private String id;
 		private double saldo;
-		private double cantidadTransferida;
+		
 
 		
 	    // Constructor
@@ -43,13 +43,7 @@ public class Monedero {
 
 			this.saldo = saldo;
 		}
-		public double getCantidadTransferida() {
-			return this.cantidadTransferida;
-		}
-		public void setCantidadTransferida(double cantidadTransferida) {
-			this.cantidadTransferida = cantidadTransferida;
-		}
-		
+	
 		
 		//Métodos
 		public  double ingresar(double cantidadIngreso) {
@@ -77,7 +71,7 @@ public class Monedero {
 		
 		public double realizarTransferencia (double cantidadTransferida, Monedero recibe) {
 			if(cantidadTransferida <= 0.0 || saldo <= 0.0) {
-				System.out.println("Error. No puedes realizar una tranferencia inferior o igual a 0.0€\n");
+				System.out.println("Error. No puedes realizar una tranferencia inferior o igual a 0.0€ o saldo insuficiente\n");
 			}else {
 				System.out.println("Perfecto. Cantidad transferida correctamente\n");
 				this.saldo = saldo - cantidadTransferida;
