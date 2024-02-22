@@ -46,7 +46,12 @@ public class Monedero {
 
 			this.saldo = saldo;
 		}
-		
+		public double getCantidadTransferida() {
+			return cantidadTransferida;
+		}
+		public void setCantidadTransferida(double cantidadTransferida) {
+			this.cantidadTransferida = cantidadTransferida;
+		}
 		
 		//Métodos
 		public  double ingresar(double cantidadIngreso) {
