@@ -19,19 +19,19 @@ public class Main {
         System.out.println("\nMonedero sin saldo:");
         mostrarValoresMonedero(monederoSinSaldo);
         
-       monederoSinSaldo.gastoDinero(50);
-        
+        System.out.println("\nPagar: ");
+        monederoSinSaldo.gastoDinero(150); 
         mostrarValoresMonedero(monederoConSaldo);
         mostrarValoresMonedero(monederoSinSaldo);
         
-        monederoConSaldo.realizarTransferencia(20, monederoSinSaldo);
+        monederoConSaldo.realizarTransferencia(200, monederoSinSaldo);
         mostrarValoresMonedero(monederoSinSaldo);
         
 	}
 	
 	private static void mostrarValoresMonedero(Monedero monedero) {
         System.out.println("ID: " + monedero.getId());
-        System.out.println("Saldo: " + monedero.getSaldo());
+        System.out.println("Saldo: " + monedero.getSaldo() + "€\n");
         
     } 
     

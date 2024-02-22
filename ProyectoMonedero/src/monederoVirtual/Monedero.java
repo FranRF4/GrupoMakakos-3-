@@ -13,13 +13,13 @@ public class Monedero {
 		 Se permite el saldo negativo.*/
 	
 	
-	// Atributos
+	    // Atributos
 		private String id;
 		private double saldo;
 		private double cantidadTransferida;
 
 		
-	// Constructor
+	    // Constructor
 		public Monedero( double saldo) {
 			this.id = creacionId();
 			this.saldo = saldo;
@@ -29,8 +29,6 @@ public class Monedero {
 			this.saldo = 0.0;
 
 		}
-		
-
 		
 		// Getters y Setters
 		public String getId() {
@@ -47,18 +45,19 @@ public class Monedero {
 			this.saldo = saldo;
 		}
 		public double getCantidadTransferida() {
-			return cantidadTransferida;
+			return this.cantidadTransferida;
 		}
 		public void setCantidadTransferida(double cantidadTransferida) {
 			this.cantidadTransferida = cantidadTransferida;
 		}
 		
+		
 		//Métodos
 		public  double ingresar(double cantidadIngreso) {
 			if(cantidadIngreso <= 0.0) {
-				System.out.println("No puedes ingresar esa cantidad. Debes ingresar una cantidad mayor de 0.0€");
+				System.out.println("No puedes ingresar esa cantidad. Debes ingresar una cantidad mayor de 0.0€\n");
 			}else {
-				System.out.println("Perfecto. Cantidad ingresada correctamente");
+				System.out.println("Perfecto. Cantidad ingresada correctamente\n");
 				this.saldo = saldo + cantidadIngreso;
 			}
 			return saldo;
@@ -66,9 +65,9 @@ public class Monedero {
 	
 		public double gastoDinero (double cantidadGastada) {
 			if(cantidadGastada <= 0.0) {
-				System.out.println("Error. No has gastado nada este mes ");
+				System.out.println("Error. No has gastado nada este mes\n");
 			}else {
-				System.out.println("Perfecto. Cantidad pagada correctamente");
+				System.out.println("Has gastado " + cantidadGastada + " €\n");
 				this.saldo = saldo - cantidadGastada;
 			}
 			return saldo;
@@ -76,9 +75,9 @@ public class Monedero {
 		
 		public double realizarTransferencia (double cantidadTransferida, Monedero recibe) {
 			if(cantidadTransferida <= 0.0) {
-				System.out.println("Error. No puedes realizar una tranferencia inferior o igual a 0.0€");
+				System.out.println("Error. No puedes realizar una tranferencia inferior o igual a 0.0€\n");
 			}else {
-				System.out.println("Perfecto. Cantidad transferida correctamente");
+				System.out.println("Perfecto. Cantidad transferida correctamente\n");
 				this.saldo = saldo - cantidadTransferida;
 				recibe.ingresar(cantidadTransferida);
 			}
