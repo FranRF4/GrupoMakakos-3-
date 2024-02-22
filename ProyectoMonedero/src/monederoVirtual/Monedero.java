@@ -37,7 +37,7 @@ public class Monedero {
 			return this.id;
 		}
 		public void setId(String id) {
-			this.id = id;
+			this.id = creacionId();
 		}
 		public double getSaldo() {
 			return this.saldo;
@@ -82,15 +82,18 @@ public class Monedero {
 			
 		
 		public String creacionId() {
+			SecureRandom random = new SecureRandom();
 			StringBuilder idGenerado = new StringBuilder(12);
-			
-			for (int i = 0; i < 12; i++) {
-				
-	           Math.random();
-	        }
 
-	        return idGenerado.toString();
+			// Generar un número aleatorio en el rango deseado
+			long numeroAleatorio = 100000000000L + Math.abs(random.nextLong()) % (999999999999L - 100000000000L + 1);
+
+			// Convertir el número a una cadena de 12 dígitos y agregarlo al StringBuilder
+			idGenerado.append(String.format("%012d", numeroAleatorio));
+
+			return idGenerado.toString();
 		}
+
 		
 		
 		
