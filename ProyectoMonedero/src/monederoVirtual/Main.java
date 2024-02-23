@@ -24,7 +24,7 @@ public class Main {
         //Ingresar
         System.out.println("\nCuanto quiere ingresar?");
         monederoSinSaldo.ingresar(20.0);
-        mostrarValoresMonedero(monederoConSaldo);
+        mostrarValoresMonedero(monederoSinSaldo);
         
         //Transferencia
         monederoConSaldo.realizarTransferencia(1000.0, monederoSinSaldo);
